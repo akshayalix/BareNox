@@ -1,35 +1,48 @@
 @echo off
 
-:: Ensure admin privileges
-fltmc >nul 2>&1 || (
-    echo Administrator privileges are required.
-    PowerShell Start -Verb RunAs '%0' 2> nul || (
-        echo Right-click on the script and select "Run as administrator".
-        pause & exit 1
-    )
-    exit 0
-)
-
 set "file=C:\Program Files (x86)\Bignox\uninst.exe"
 
-echo Stopping Process....
+echo:
+echo -^> Stopping Process....
+echo:
 taskkill /F /IM Nox.exe
+echo:
 taskkill /F /IM NoxVMHandle.exe
+echo:
 taskkill /F /IM NoxVMSVC.exe
+echo:
 taskkill /F /IM nox_adb.exe
+echo:
 
 if exist "%file%" (
 	cd "C:\Program Files (x86)\Bignox"
-	echo uninstalling Bignox...
+	echo -^> Uninstalling Bignox...
 	".\uninst.exe"
+    echo:
 ) else (
-	echo file not found...
+	echo -^> File not found...
 )
+echo:
 
+echo -^> Deleting Folders....
+echo:
 cd "C:\Program Files (x86)"
-rmdir Bignox
+rmdir /s /q Bignox
+echo:
+cd "%userprofile%"
+rmdir /s /q .BigNox
+echo:
+cd "%userprofile%\AppData\Local"
+rmdir /s /q Nox
+rmdir /s /q NoxSrv
+echo:
 
-echo Done....
+echo -^> Removing shortcut....
+del "%userprofile%\Desktop\Nox.lnk"
+echo:
+
+echo -^> Done....
+echo:
 
 pause
 

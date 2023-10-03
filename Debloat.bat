@@ -1,9 +1,24 @@
+@echo off
+
 echo -^> Starting Debloating process...
+echo:
+
+echo -^> Extracting Nova Launcher....
+"%cd%\Tools\7-Zip\7za.exe" x "%cd%\Tools\Nova\nova.7z" -o"%cd%\Tools\Nova"
+move "%cd%\Tools\Nova\nova.apk" "%cd%\NoxPlayer\Nox\bin"
+echo:
+
+echo -^> Setting adb Directory.....
 cd "%cd%\NoxPlayer\Nox\bin"
 echo:
 
+echo -^> Setting adb root....
 adb root
+echo:
+
+echo -^> Setting adb remount....
 adb remount
+echo:
 
 echo -^> Removing AmazeFileManager
 adb shell rm -r /system/app/AmazeFileManager
@@ -50,14 +65,19 @@ echo:
 echo -^> Removing newAppNameEn
 adb shell rm -r /system/app/newAppNameEn
 echo:
-echo -^> Copying Nova Launcher....
-copy "%cd%\Tools\Nova\nova.apk" "%cd%\NoxPlayer\Nox\bin"
-echo:
 echo -^> Installing Nova Launcher.......
 adb install nova.apk
 echo:
 echo -^> Installed....
 echo:
-echo -^> Rebooting NoxPlayer.....
-adb reboot
+
+echo -^> Done.....
 echo:
+
+echo -^> Restart NoxPlayer.....
+echo:
+
+pause
+
+
+
