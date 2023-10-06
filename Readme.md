@@ -58,6 +58,10 @@
 
 Note : If you move the "NoxPlayer" folder somewhere else from his downloaded location, the desktop shortcut won't work.
 
+# Problem
+
+- Can't stop nox from installing "BigNoxVM".
+
 # Credits
 
 - [Raycast7373](https://github.com/Raycast7373/NoxPlayerPortable) For base script.
