@@ -45,11 +45,6 @@ rmdir /s /q NoxSrv
 echo:
 ping -n 2 127.0.0.1 > nul
 
-echo -^> Removing shortcut....
-del "%userprofile%\Desktop\Nox.lnk"
-echo:
-ping -n 2 127.0.0.1 > nul
-
 echo -^> Done....
 echo:
 ping -n 2 127.0.0.1 > nul
