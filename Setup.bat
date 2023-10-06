@@ -3,6 +3,7 @@
 REM Delay in milliseconds (1000 milliseconds = 1 second)
 set "delay=500"
 
+ping -n 2 127.0.0.1 > nul
 echo:
 echo -^> Starting BareNox.....
 echo:
