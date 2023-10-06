@@ -1,5 +1,5 @@
 <p align=center>
-    <img src=.\Tools\Assets\Nox.png>
+    <img src=.\Tools\Assets\Nox.png height=100 width=100>
 </p>
 
 # BareNox
@@ -30,7 +30,7 @@
 
   - Extract zip.
 
-  - Open extracted open
+  - Open extracted folder.
 
   - Run "setup.bat"
 
