@@ -1,24 +1,33 @@
 @echo off
 
+REM Delay in milliseconds (1000 milliseconds = 1 second)
+set "delay=500"
+
+ping -n 2 127.0.0.1 > nul
 echo -^> Starting Debloating process...
 echo:
+ping -n 2 127.0.0.1 > nul
 
 echo -^> Extracting Nova Launcher....
 "%cd%\Tools\7-Zip\7za.exe" x "%cd%\Tools\Nova\nova.7z" -o"%cd%\Tools\Nova"
 move "%cd%\Tools\Nova\nova.apk" "%cd%\NoxPlayer\Nox\bin"
 echo:
+ping -n 2 127.0.0.1 > nul
 
 echo -^> Setting adb Directory.....
 cd "%cd%\NoxPlayer\Nox\bin"
 echo:
+ping -n 2 127.0.0.1 > nul
 
 echo -^> Setting adb root....
 adb root
 echo:
+ping -n 2 127.0.0.1 > nul
 
 echo -^> Setting adb remount....
 adb remount
 echo:
+ping -n 2 127.0.0.1 > nul
 
 echo -^> Removing AmazeFileManager
 adb shell rm -r /system/app/AmazeFileManager
@@ -70,12 +79,15 @@ adb install nova.apk
 echo:
 echo -^> Installed....
 echo:
+ping -n 2 127.0.0.1 > nul
 
 echo -^> Done.....
 echo:
+ping -n 2 127.0.0.1 > nul
 
 echo -^> Restart NoxPlayer.....
 echo:
+ping -n 2 127.0.0.1 > nul
 
 pause
 
