@@ -44,19 +44,21 @@
 
 # Unistallation
 
+- Open NoxPlayer.
+
 - Run "Uninstall.bat" from folder.
 
 - Wait for it to complete.
+
+- Lastly you can just delete the "NoxPlayer" folder.
+
+Note : You should run "Uninstall.bat" twice to completly remove "BigNox".
 
 # Run
 
 - To run normally use "RunNox.bat"
 
 - To run with root use "RunNox-Root.bat"
-
-- You can also use the desktop shortcut.
-
-Note : If you move the "NoxPlayer" folder somewhere else from his downloaded location, the desktop shortcut won't work.
 
 # Problem
 
