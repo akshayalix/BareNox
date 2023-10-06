@@ -13,7 +13,7 @@
   - Clone the repo using git.
 
     ```
-    https://github.com/akshayalix/BareNox.git
+    git clone --depth=1 https://github.com/akshayalix/BareNox.git
     ```
 
   - Navigate to "BareNox".
@@ -47,6 +47,16 @@
 - Run "Uninstall.bat" from folder.
 
 - Wait for it to complete.
+
+# Run
+
+- To run normally use "RunNox.bat"
+
+- To run with root use "RunNox-Root.bat"
+
+- You can also use the desktop shortcut.
+
+Note : If you move the "NoxPlayer" folder somewhere else from his downloaded location, the desktop shortcut won't work.
 
 # Credits
 
