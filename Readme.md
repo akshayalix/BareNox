@@ -46,7 +46,7 @@
 
 - Open NoxPlayer.
 
-- Run "Uninstall.bat" from folder.
+- Run "Uninstall.bat" as admin from folder.
 
 - Wait for it to complete.
 
