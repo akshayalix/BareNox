@@ -55,40 +55,6 @@ echo -^> Copy Complete...
 echo:
 ping -n 2 127.0.0.1 > nul
 
-echo -^> Installation Done......
-echo:
-ping -n 2 127.0.0.1 > nul
-
-rem Define the program you want to create a shortcut for
-set "ProgramName=Nox"
-set "ProgramPath=%cd%\NoxPlayer\Nox\bin\Nox.exe"
-
-rem Define the location for the shortcut (the desktop)
-set "DesktopFolder=%userprofile%\Desktop"
-
-rem Create a VBScript file to create the shortcut
-> CreateShortcut.vbs (
-    echo Set objShell = WScript.CreateObject^("WScript.Shell"^)
-    echo:
-    echo DesktopPath = objShell.SpecialFolders^("Desktop"^)
-    echo:
-    echo Set objShortCut = objShell.CreateShortcut^(DesktopPath ^& "\%ProgramName%.lnk"^)
-    echo:
-    echo objShortCut.TargetPath = "%ProgramPath%"
-    echo:
-    echo objShortCut.WorkingDirectory = "%ProgramPath%"
-    echo:
-    echo objShortCut.Save
-)
-ping -n 2 127.0.0.1 > nul
-
-rem Execute the VBScript file to create the shortcut
-cscript CreateShortcut.vbs
-
-rem Clean up the temporary VBScript file
-del CreateShortcut.vbs
-
-echo:
 echo -^> All Done!
 echo:
 ping -n 2 127.0.0.1 > nul
